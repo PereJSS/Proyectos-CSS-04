@@ -133,7 +133,7 @@ button.btn:hover {
     transition: 0.3s ease-in-out;
   }
 }
-@media (max-width: 1440px) and (min-width: 1025px) {
+@media (max-width: 1920px) and (min-width: 1025px) {
   .hero-btn {
     text-align: left;
   }
@@ -198,7 +198,7 @@ button.btn:hover {
     height: 24px;
   }
 }
-@media (max-width: 1440px) and (min-width: 1025px) {
+@media (max-width: 1920px) and (min-width: 1025px) {
   .main-header {
     display: flex;
     justify-content: space-between;
@@ -262,6 +262,11 @@ button.btn:hover {
     padding-right: 32px;
     padding-bottom: 40px;
   }
+  .main-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 708px;
+  }
   .main-footer h2 {
     font-size: 32px;
     line-height: 32px;
@@ -289,7 +294,7 @@ button.btn:hover {
     height: 24px;
   }
 }
-@media (max-width: 1440px) and (min-width: 1025px) {
+@media (max-width: 1920px) and (min-width: 1025px) {
   .main-footer {
     display: flex;
     justify-content: space-between;
@@ -463,7 +468,7 @@ button.btn:hover {
     margin-bottom: 34px;
   }
 }
-@media (max-width: 1440px) and (min-width: 1025px) {
+@media (max-width: 1920px) and (min-width: 1025px) {
   .hero-section::before {
     background-image: url("../img/Group 26-desktop.svg");
     top: -23px;
@@ -587,7 +592,7 @@ button.btn:hover {
     grid-column: 1/-1;
   }
 }
-@media (max-width: 1440px) and (min-width: 1025px) {
+@media (max-width: 1920px) and (min-width: 1025px) {
   .experience-section {
     margin-left: 32px;
     margin-right: 32px;
@@ -669,7 +674,7 @@ button.btn:hover {
     gap: 24px;
   }
 }
-@media (max-width: 1440px) and (min-width: 1025px) {
+@media (max-width: 1920px) and (min-width: 1025px) {
   .projects-section::before {
     display: none;
   }
@@ -846,7 +851,7 @@ button.btn:hover {
     padding-bottom: 90px;
   }
 }
-@media (max-width: 1440px) and (min-width: 1025px) {
+@media (max-width: 1920px) and (min-width: 1025px) {
   .form-section {
     margin-left: -165px;
     margin-right: -165px;
@@ -905,7 +910,7 @@ p {
   color: #d9d9d9;
 }
 
-@media (max-width: 1440px) and (min-width: 1025px) {
+@media (max-width: 1920px) and (min-width: 1025px) {
   .container {
     margin-left: 165px;
     margin-right: 165px;

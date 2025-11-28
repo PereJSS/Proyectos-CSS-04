@@ -42,11 +42,18 @@ nav{
     .main-footer{
         display: flex;
         justify-content: space-between;
-        align-items: center; // Alinea verticalmente h2 y nav
+        align-items: center; 
         text-align: left;
         padding-left: 32px;
         padding-right: 32px;
         padding-bottom: 40px;
+
+        .footer-content{
+            display: flex;
+            justify-content: space-between;
+            width: 708px;
+            
+        }
 
         h2 {
             font-size: 32px;
