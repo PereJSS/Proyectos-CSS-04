@@ -1,0 +1,187 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.form-section {
+    background-color: vars.$gray;
+    isolation: isolate;
+    margin-left: -16px;
+    margin-right: -16px;
+    position: relative; 
+    &::after {
+        content: "";
+        background-image: url("../img/Group 26.svg");
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        rotate: 180deg;
+        position: absolute;
+        width: 530px;
+        height: 129px;
+        bottom: 90px;
+        right: 195px;
+        pointer-events: none; 
+        z-index: 1; 
+    }
+
+    .form-header{
+        text-align: center;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 50px;
+        
+        h2{
+            margin-bottom: 20px;
+            padding-top:60px;
+        }
+    }
+
+    form{
+        margin-left: 16px;
+        margin-right: 16px;
+        label {
+            display: none; 
+        }
+        input, textarea{
+            width: 100%;
+            height: 50px;
+            margin-bottom: 32px;
+            padding: 10px;
+            border: none;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0px;
+            background-color: vars.$gray; 
+            border-bottom: 1px solid vars.$light-gray; 
+            outline: none;    
+
+            &::placeholder {
+                color: vars.$light-gray; 
+                opacity: 1;
+                padding-left: 24px;
+                font-size: 16px;
+                color: vars.$light-gray; 
+                text-transform: uppercase;
+            }
+
+            &:focus {
+                border-bottom: 2px solid vars.$green; 
+            }
+        }
+        textarea {
+            margin-bottom: 32px;
+            padding-bottom: 100px;
+            resize: none;
+            overflow: hidden;
+        }
+        input.error,
+        textarea.error {
+            border-bottom: 2px solid vars.$red; 
+            background-color: inherit; 
+            color: inherit;             
+        }
+
+        .error-message {
+            color: vars.$red;
+            font-size: 14px;
+            margin-top: -24px;
+            margin-bottom: 16px;
+            display: block;
+            text-align: right;
+        }
+
+        input.has-value,
+        textarea.has-value {
+            background-color: vars.$gray !important;
+            color: vars.$white !important;
+        }
+
+        // Corrige el fondo del autocompletar de Chrome/Webkit
+        input:-webkit-autofill,
+        textarea:-webkit-autofill {
+            background-color: vars.$gray !important;
+            -webkit-box-shadow: 0 0 0 1000px #{vars.$gray} inset !important;
+            box-shadow: 0 0 0 1000px #{vars.$gray} inset !important;
+            -webkit-text-fill-color: vars.$white !important;
+            color: vars.$white !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    }
+}
+
+@include mixins.breakpoint(tablet) {
+    .form-section {
+        position: relative;
+        &::after {
+            bottom: 80px;
+            left: -375px;
+        }
+
+        .form-header{
+            h2{
+                font-size: 72px;
+                line-height: 72px;
+                letter-spacing: -2.05px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0px;
+                font-weight: 500;
+                width: 445px;
+                margin: 0 auto;
+            }
+        }
+        form{
+            width: 445px;
+            margin: 0 auto;
+            padding-bottom: 90px;
+        }
+    }
+}
+
+
+@include mixins.breakpoint(desktop) {
+
+    .form-section {
+        margin-left:-165px;
+        margin-right:-165px;
+        padding-left: 165px;
+        padding-right: 165px;
+        
+
+        display: flex;
+        position: relative;
+        &::after {
+            bottom: -100px;
+            left: -55px;
+            width: 530px;
+            background-size: 530px 129px;
+        }
+
+        .form-header{
+            h2{
+                font-size: 85px;
+                line-height: 85px;
+                letter-spacing: -2.05px;
+                text-align: left;
+            }
+            p{
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0px;
+                font-weight: 500;
+                width: 445px;
+                margin: 0 auto;
+                text-align: left;
+            }
+        }
+        form{
+            width: 445px;
+            height: 327px;
+            margin: 0 auto;
+            padding-bottom: 92px;
+            padding-top: 60px;
+        }
+    }
+}
+
+    

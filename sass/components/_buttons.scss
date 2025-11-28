@@ -1,0 +1,47 @@
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/variables' as vars;
+
+.hero-btn{
+    text-align: center;
+    a{
+        @include mixins.btn;
+        
+    }
+}
+
+a.btn{
+    @include mixins.btn;
+}
+
+.project-btns{
+    display: flex;
+    gap: 30px;
+}
+button.btn{
+    @include mixins.btn;
+    background-color: vars.$gray;
+    color: vars.$white;
+    border: none;
+    margin-left: auto; 
+    display: block; 
+    padding-bottom: 87px; 
+}
+
+@include mixins.breakpoint(tablet) {
+    .hero-btn{
+        text-align: left;
+        a{
+            @include mixins.btn;
+        }
+    }
+}
+
+@include mixins.breakpoint(desktop) {
+    .hero-btn{
+        text-align: left;
+        a{
+            @include mixins.btn;
+        }
+    }
+}
+    

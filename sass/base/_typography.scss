@@ -1,0 +1,52 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixins;
+
+body {
+  font-family: vars.$primary-font;
+}
+
+h1{
+    font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  letter-spacing: -1.14px;
+}
+
+h3{
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 40px;
+    letter-spacing: -1px;
+}
+
+h2{
+    font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  letter-spacing: -1.14px;
+}
+
+h4{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    margin-bottom: 7px;
+}
+
+.projects-items p{
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    color: vars.$light-gray;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.form-header p{
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    color: vars.$light-gray;
+    font-weight: 300;
+}

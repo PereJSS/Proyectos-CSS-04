@@ -1,0 +1,143 @@
+@use  '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixins;
+
+.main-footer{
+    text-align: center;
+    background-color: vars.$gray;
+    margin-left: -16px;
+    margin-right: -16px;
+    h2{
+        font-size: 24px;
+        letter-spacing: -0.33px;
+        line-height: 32px;
+        margin-bottom: 20px;
+        
+
+    &::before{
+        content: "";
+        display: block;
+        width: 343px;
+        height: 1px;
+        background-color: vars.$light-gray;
+        margin-bottom: 39px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+nav{
+    padding-bottom: 60px;
+    ul{
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        list-style: none;
+
+        
+            
+}
+}
+}
+
+@include mixins.breakpoint(tablet) {
+    .main-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; // Alinea verticalmente h2 y nav
+        text-align: left;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-bottom: 40px;
+
+        h2 {
+            font-size: 32px;
+            line-height: 32px;
+            letter-spacing: -0.44px;
+            margin-bottom: 0; 
+            position: relative; 
+            &::before{
+                width: 708px;
+                position: absolute;
+                left: 0;
+                top: -40px;
+                margin-left: 0;
+                margin-right: 0;
+                transform: none;
+            }
+        }
+        nav {
+            padding-bottom: 0;
+            ul {
+                gap: 32px;
+            
+            a{
+                img{
+                    width: 24px;
+                    height: 24px;
+                    
+                }
+            } 
+        }
+    }
+
+    }
+
+}
+
+@include mixins.breakpoint(desktop) {
+    .main-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        padding-bottom: 90px;
+        margin-left:-165px;
+        margin-right:-165px;
+        padding-left: 165px;
+        padding-right: 165px;
+
+        .footer-content{
+            margin-top: 260px;
+            display: flex;
+            justify-content: space-between;
+            width: 1110px;
+
+            
+            
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 32px;
+            letter-spacing: -0.44px;
+            margin-bottom: 0; 
+            position: relative;
+             
+            &::before{
+                width: 1110px;
+                position: absolute;
+                left: 0;
+                top: -70px;
+                margin-left: 0;
+                margin-right: 0;
+                transform: none;
+            }
+        }
+        nav {
+            padding-bottom: 0;
+            ul {
+                gap: 32px;
+            
+            a{
+                img{
+                    width: 24px;
+                    height: 24px;
+                    
+                }
+            } 
+        }
+    }
+
+    }
+
+}
+    

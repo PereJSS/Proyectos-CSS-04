@@ -1,0 +1,104 @@
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/variables' as vars;
+
+.main-header {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    
+  
+    
+
+    p{
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    nav{
+        margin-top: 20px;
+        
+        ul{
+            display: flex;
+            justify-content: center;
+            
+            gap: 25px;
+            li{
+                list-style: none;
+
+                a{
+                    text-decoration: none;
+                }
+            }
+    }
+
+
+}
+}
+
+
+@include mixins.breakpoint(tablet) {
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p{
+            font-size: 32px;
+            letter-spacing: -0.44px;
+        }
+
+        nav{
+            margin-top: 0;
+            display: flex;
+           
+            ul{
+                gap: 30px;
+                
+
+                a{
+                    img{
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        
+
+            
+    }
+}
+}
+
+@include mixins.breakpoint(desktop) {
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p{
+            font-size: 32px;
+            letter-spacing: -0.44px;
+        }
+
+        nav{
+            margin-top: 0;
+            display: flex;
+           
+            ul{
+                gap: 30px;
+                
+
+                a{
+                    img{
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        
+
+            
+    }
+}
+}
+    

@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+html {
+    background-color: vars.$black;
+}
+
+body {
+    overflow-x: hidden;
+
+} 
+.container {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, a{
+    color: vars.$white;
+}
+
+
+
+p {
+    color: vars.$light-gray;
+}
+
+@include mixins.breakpoint(desktop) {
+    .container {
+        margin-left:165px;
+        margin-right:165px;
+    }
+}

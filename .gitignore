@@ -1,0 +1,13 @@
+# Ignora archivos y carpetas comunes
+node_modules/
+dist/
+build/
+.env
+.DS_Store
+*.log
+*.tmp
+.sass-cache/
+.cache/
+.idea/
+.vscode/
+*.swp

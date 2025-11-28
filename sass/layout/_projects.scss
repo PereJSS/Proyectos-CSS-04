@@ -1,0 +1,129 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.projects-section {
+
+    margin-bottom: 80px;
+    
+        
+        &::before {
+            content: "";
+            display: block;
+            width: 345px;
+            height: 1px;
+            background-color: vars.$white;
+            margin-bottom: 80px;
+        }
+
+        .projects-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+
+
+        }
+
+        article{
+            margin-bottom: 40px;
+
+        img{
+            margin-bottom: 20px;
+            width: 343px;
+            height: 253px;
+        }
+
+        .project-tech{
+            display: flex;
+            gap: 18px;
+        }
+            
+    }
+}
+
+
+@include mixins.breakpoint(tablet) {
+    .projects-section{
+        margin-left: 32px;
+        margin-right: 32px;
+
+        &::before {
+            display: none;
+        }
+        .projects-header{
+            margin-bottom: 60px;
+
+            h2{
+                font-size: 72px;
+                line-height: 72px;
+                letter-spacing: -2.05px;
+            }
+        }
+        .projects-items{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+            
+    }
+}
+
+
+@include mixins.breakpoint(desktop) {
+    .projects-section{
+        
+
+        &::before {
+            display: none;
+        }
+        .projects-header{
+            margin-bottom: 60px;
+
+            h2{
+                font-size: 85px;
+                line-height: 85px;
+                letter-spacing: -2.05px;
+            }
+        }
+        .projects-items{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+
+            img{
+                width: 540px;
+                height: 400px;
+                
+            }
+
+            article{
+                text-align: left;
+                position: relative; 
+
+                .project-btns{
+                    display: none; 
+                }
+        }
+            
+    }
+}
+
+.projects-items article:hover {
+    img {
+        filter: brightness(0.3);
+        transition: filter 0.3s ease;
+    }
+    .project-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        position: absolute;
+        top: 36%; 
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+}
+}
