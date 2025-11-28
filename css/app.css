@@ -544,15 +544,16 @@ button.btn:hover {
   height: 1px;
   background-color: #FFFFFF;
   margin-bottom: 40px;
-}
-
-article {
   text-align: center;
 }
-article h3 {
+
+.experience-items article {
+  text-align: center;
+}
+.experience-items article h3 {
   margin-bottom: 16px;
 }
-article p {
+.experience-items article p {
   margin-bottom: 24px;
 }
 
