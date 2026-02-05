@@ -1,13 +1,13 @@
-@use 'variables' as vars;
+@use "variables" as vars;
 
 @mixin breakpoint($point) {
   @if $point == largedesktop {
-    @media (max-width: 1920px) and (min-width: 1441px) {
+    @media (max-width: 2600px) and (min-width: 1441px) {
       @content;
     }
   }
   @if $point == desktop {
-    @media (max-width: 1920px) and (min-width: 1025px) {
+    @media (max-width: 2600px) and (min-width: 1025px) {
       @content;
     }
   } @else if $point == tablet {
@@ -41,7 +41,7 @@
   }
 }
 
-@mixin btn{
+@mixin btn {
   font-size: 16px;
   line-height: 26px;
   font-weight: bold;
@@ -50,7 +50,7 @@
   text-decoration: underline;
   text-underline-offset: 15px;
   text-decoration-color: vars.$green;
-  
+
   &:hover {
     color: vars.$green;
     transition: 0.3s ease-in-out;
